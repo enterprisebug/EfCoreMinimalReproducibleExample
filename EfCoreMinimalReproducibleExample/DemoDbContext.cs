@@ -110,6 +110,7 @@ public record OperatingHours
 
 public record OperatingHourRange
 {
+    // if the next line is uncommented it works. Why?
     //protected OperatingHourRange() => (Start, End) = (null!, null!);
     public OperatingHourRange(OperatingHours start, OperatingHours end)
     {
