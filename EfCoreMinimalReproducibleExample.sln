@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCoreMinimalReproducibleExample", "EfCoreMinimalReproducibleExample\EfCoreMinimalReproducibleExample.csproj", "{0E03EC95-CF4E-4AC1-80DD-0930BB3F57DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E03EC95-CF4E-4AC1-80DD-0930BB3F57DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E03EC95-CF4E-4AC1-80DD-0930BB3F57DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E03EC95-CF4E-4AC1-80DD-0930BB3F57DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E03EC95-CF4E-4AC1-80DD-0930BB3F57DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E37998A-F7FE-4809-BF1B-9B414B1E11B2}
+	EndGlobalSection
+EndGlobal
