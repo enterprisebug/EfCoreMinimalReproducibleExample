@@ -13,11 +13,8 @@ await ctx.SaveChangesAsync();
 Console.WriteLine("Seeded"); 
 
 using var newCtx = new DemoDbContext();
-//var loadDerivedEntity1 = newCtx.DerivedEntity1s.First();
-var loadDerivedEntity2 = newCtx.RootEntities.First();
-
-//Console.WriteLine(loadDerivedEntity1);
-Console.WriteLine(loadDerivedEntity2);
+var loaded = newCtx.RootEntities.First();
+Console.WriteLine(loaded.BaseEntity);
 
 Console.WriteLine("Loaded");
 

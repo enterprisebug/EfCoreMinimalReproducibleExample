@@ -66,10 +66,8 @@ namespace EfCoreMinimalReproducibleExample
 
     public abstract class CalculationInformation
     {
-        protected CalculationInformation() => ServiceType = null!;
-        protected CalculationInformation(ServiceType serviceType) => ServiceType = serviceType!;
+        protected CalculationInformation() { }
         public Guid Id { get; private  set; }
-        public ServiceType ServiceType { get; private set; }
         internal abstract OperatingHours OverallOperatingHours { get; }
     }
 
@@ -77,7 +75,7 @@ namespace EfCoreMinimalReproducibleExample
     {
         protected ServiceContractCalculationInformation() => (OperatingHourRange, RunTimePerYearAndEngine) = (null!, null!);
 
-        internal ServiceContractCalculationInformation(OperatingHourRange operatingHourRange, OperatingHours runTimePerYearAndEngine) : base(new ServiceType(1))
+        internal ServiceContractCalculationInformation(OperatingHourRange operatingHourRange, OperatingHours runTimePerYearAndEngine) : base()
         {
             OperatingHourRange = operatingHourRange;
             RunTimePerYearAndEngine = runTimePerYearAndEngine;
@@ -90,23 +88,13 @@ namespace EfCoreMinimalReproducibleExample
 
     public class MaintenanceCalculationInformation : CalculationInformation
     {
-        protected internal MaintenanceCalculationInformation() : base(new ServiceType(2))
+        protected internal MaintenanceCalculationInformation() : base()
         {
 
         }
         internal override OperatingHours OverallOperatingHours => OperatingHours.Zero;
     }
 }
-
-public class ServiceType
-{
-    public ServiceType(int typeId)
-    {
-        TypeId = typeId;
-    }
-    public Guid Id { get; set; }
-    public int TypeId { get; private set; }
-} 
 
 public record OperatingHours
 {
