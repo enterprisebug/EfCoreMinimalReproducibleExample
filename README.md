@@ -3,11 +3,11 @@ Minimal reproducible example
  
 ## Steps to Reproduce
 
-### run with "F5".
+### Run with "F5".
 Error that is thrown is:
 ![image](https://user-images.githubusercontent.com/1539741/158059006-4927b3bf-80d5-47f7-a6cd-20de48e4e9b3.png)
 
-### behavior when inspecting the variable in debug session 
+### Behavior when inspecting the variable in debug session 
 if you set a debugger breakpoint in `Program.cs:16` and hover over `loaded.BaseEntity` you see:
 ![image](https://user-images.githubusercontent.com/1539741/158059020-ce8bcbc9-9a59-4caa-9e90-ce52b984703a.png)
 if you then continue the execution no error occurs.
