@@ -30,8 +30,8 @@ namespace EfCoreMinimalReproducibleExample
             {
                 b.OwnsOne(x => x.OperatingHourRange, ob =>
                 {
-                    ob.Property(x => x!.Start).HasConversion(ValueTypeConverters.OperatingHoursValueConverter);
-                    ob.Property(x => x!.End).HasConversion(ValueTypeConverters.OperatingHoursValueConverter);
+                    ob.Property(x => x.Start).HasConversion(ValueTypeConverters.OperatingHoursValueConverter);
+                    ob.Property(x => x.End).HasConversion(ValueTypeConverters.OperatingHoursValueConverter);
                 });
                 b.Property(x => x.RunTimePerYearAndEngine).HasConversion(ValueTypeConverters.OperatingHoursValueConverter);
             });
@@ -83,7 +83,7 @@ namespace EfCoreMinimalReproducibleExample
         public OperatingHourRange OperatingHourRange { get; private set; }
         public OperatingHours RunTimePerYearAndEngine { get; private set; }
 
-        internal override OperatingHours OverallOperatingHours => OperatingHourRange.OverallOperatingHours;
+        internal override OperatingHours OverallOperatingHours => OperatingHours.Zero;
     }
 
     public class MaintenanceCalculationInformation : CalculationInformation
@@ -106,12 +106,6 @@ public record OperatingHours
     public static OperatingHours Zero => new(0);
 
     public int Value { get; }
-
-#pragma warning disable CA1062 // Validate arguments of public methods
-    public static implicit operator int(OperatingHours valueType) => valueType.Value;
-    public static OperatingHours operator -(OperatingHours left, OperatingHours right) => new(left.Value - right.Value);
-    public static OperatingHours operator +(OperatingHours left, OperatingHours right) => new(left.Value + right.Value);
-#pragma warning restore CA1062 // Validate arguments of public methods
 }
 
 public record OperatingHourRange
@@ -124,5 +118,4 @@ public record OperatingHourRange
     }
     public OperatingHours Start { get; private init; }
     public OperatingHours End { get; private init; }
-    public OperatingHours OverallOperatingHours => End - Start;
 }
