@@ -69,7 +69,7 @@ IF NOT EXISTS (
     WHERE [MigrationId] = N'20241128095555_DataMigration'
 )
 BEGIN
-    UPDATE MyEntity SET Name = 'New Name'
+    UPDATE dbo.MyEntities SET Name = 'New Name'
 END;
 GO
 

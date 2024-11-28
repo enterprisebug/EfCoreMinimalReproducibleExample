@@ -11,7 +11,7 @@ namespace EfCoreMinimalReproducibleExample.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql($"UPDATE {nameof(MyEntity)} SET Name = 'New Name'");
+            migrationBuilder.Sql($"UPDATE dbo.MyEntities SET Name = 'New Name'");
         }
 
         /// <inheritdoc />
