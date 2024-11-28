@@ -10,6 +10,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{17A8291A-A
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "result", "result", "{EE990FBE-606D-4EBC-BB2C-B77A5EEDAE9F}"
+	ProjectSection(SolutionItems) = preProject
+		result\migration_net8.sql = result\migration_net8.sql
+		result\migration_net9.sql = result\migration_net9.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{E488CD0F-6037-4091-B2BD-B850254D294D}"
+	ProjectSection(SolutionItems) = preProject
+		assets\Difference-Generated-SQL.png = assets\Difference-Generated-SQL.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
